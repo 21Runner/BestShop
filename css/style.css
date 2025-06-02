@@ -13,18 +13,25 @@
     --color-white: #FFFFFF;
 
     /* --- FONTS --- */
-
+    --font-open-sans: "Open Sans", sans-serif;
+    --font-raleway: "Raleway", sans-serif;
     /* --- SHAPES, DIMENSIONS, SPACING --- */
 
 }
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+html, body{
+    font-size: 16px;
 }
 
 /* GOOGLE FONT CLASSES*/
 
-.open-sans-normal {
+.open-sans-regular {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
@@ -33,10 +40,49 @@
     "wdth" 100;
 }
 
-.raleway-normal {
+.open-sans-bolder {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.open-sans-bold {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.raleway-light {
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
+  font-style: normal;
+}
+
+.raleway-regular {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.raleway-bolder {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.raleway-bold {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
   font-style: normal;
 }
 
@@ -45,11 +91,66 @@
 .container {
     width: var(--width-page-container);
     margin: 0 auto;
-    background-color: var(--color-green);
 }
+
+/* Section HEADER */
 
 header {
     width: 100vw;
-    height: 20vh;
-    background-color: var(--color-primary);
+    box-shadow: 0 3px 6px #00000029;
 }
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-raleway);
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 32px;
+    letter-spacing: 0;
+    color: var(--color-primary);
+    /* padding: 1rem 0; */
+}
+
+nav li {
+    /* list-style: none; */
+    display: inline;
+}
+
+nav a,
+nav a:link, 
+nav a:visited,
+nav a:hover,
+nav a:active {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--color-gray);
+    font-family: var(--font-open-sans);
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    font-size: 11px;
+    letter-spacing: 3.2px;
+
+    /* height: 2rem; */
+    padding: 1.7rem 0.5rem;
+    border-bottom: 4px solid var(--color-white);
+}
+
+nav a:hover {
+    color: var(--color-black);
+    border-bottom: 4px solid var(--color-primary);
+}
+
+/* SECTION */
+
+
+
