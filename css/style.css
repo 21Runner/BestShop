@@ -1,5 +1,21 @@
+/* --- VARIABLES --- */
 :root {
     --width-page-container: 1352px;
+
+    /* --- COLORS --- */
+    --color-primary: #08A6E4;
+    --color-primary-shadow: rgba(7, 172, 230, .16);
+    --color-redish: red; /* THIS NEEDS TO BE UPDATED */
+    --color-green: #55DFB4;
+    --color-black: #000000;
+    --color-gray: #A5A5A5;
+    --color-light-gray: #F7F7F7;
+    --color-white: #FFFFFF;
+
+    /* --- FONTS --- */
+
+    /* --- SHAPES, DIMENSIONS, SPACING --- */
+
 }
 
 * {
@@ -29,11 +45,11 @@
 .container {
     width: var(--width-page-container);
     margin: 0 auto;
-    background-color: aquamarine;
+    background-color: var(--color-green);
 }
 
 header {
     width: 100vw;
     height: 20vh;
-    background-color: beige;
+    background-color: var(--color-primary);
 }
