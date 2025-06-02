@@ -76,7 +76,7 @@ html, body{
   font-style: normal;
 }
 
-.raleway-bold {
+.raleway-extra-bold {
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   font-weight: 800;
@@ -209,9 +209,31 @@ nav a:hover {
 
 .statistics h2 {
     font-size: 2.2rem;
+    margin-top: 6rem;
 }
 
 .stats-box {
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
+    margin: 6rem 2rem;
+}
+
+.stats-box-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.stats-box-card img {
+    align-self: flex-end;
+}
+
+.counts {
+    font-size: 1.4rem;
+    letter-spacing: 5.96px;
+}
+
+.gray-description {
+    font-size: 1.1rem;
+    color: var(--color-gray);
 }
