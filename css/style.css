@@ -1,0 +1,39 @@
+:root {
+    --width-page-container: 1352px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* GOOGLE FONT CLASSES*/
+
+.open-sans-normal {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.raleway-normal {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+
+.container {
+    width: var(--width-page-container);
+    margin: 0 auto;
+    background-color: aquamarine;
+}
+
+header {
+    width: 100vw;
+    height: 20vh;
+    background-color: beige;
+}
