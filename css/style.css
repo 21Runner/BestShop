@@ -13,6 +13,9 @@
     --color-white: #FFFFFF;
 
     --color-gray-border: #E8E9ED;
+    --color-gray-form: #95989A;
+
+    --color-gray-consent: #707070;
 
     /* --- FONTS --- */
     --font-open-sans: "Open Sans", sans-serif;
@@ -559,6 +562,7 @@ nav a:hover {
     /* transform: scale(110%, 110%); */
     box-shadow: 5px 10px 27px var(--color-primary-shadow);
     min-height: 31rem;
+    min-width: 30%;
 }
 
 .pricing-card:nth-of-type(3) {
@@ -576,3 +580,144 @@ nav a:hover {
 .pricing-card:nth-of-type(2) ol li:last-of-type::before {
     background-image: url(../assets/Close.svg);
 }
+
+/* --- CONTACT --- */
+
+.contact-container {
+    /* border: 1px solid gray; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    min-height: 20rem;
+}
+
+.contact-left {
+    /* border: 1px dashed green; */
+    font-size: 1rem;
+    font-weight: 300;
+    width: 35%;
+}
+
+.contact-left p {
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.contact-left h2 {
+    font-size: 49px;
+    margin-bottom: 2rem;
+}
+
+.contact-left ol {
+    display: flex;
+    justify-items: flex-start;
+}
+
+.contact-left li {
+    font-weight: 400;
+    position: relative;
+    color: var(--color-gray);
+}
+
+.contact-left li:nth-of-type(1) {
+    margin-left: 2rem;
+}
+
+.contact-left li:nth-of-type(2) {
+margin-left: 3rem;
+}
+
+.contact-left li::before {
+    content: "";
+    position: absolute;
+    width:27px;
+    height: 27px;
+    top:50%;
+    left:-15%;
+    transform: translate(-50%,-50%);
+    background-image: url(../assets/Mail\ Icon.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.contact-left li:nth-of-type(2)::before {
+    background-image: url(../assets/Phone\ Icon.svg);
+}
+
+.contact-right{
+    /* border: 1px dashed blueviolet; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 35%;
+    align-self: stretch;
+}
+
+.contact-right label[for="username"],
+.contact-right label[for="email"]  {
+    text-transform: uppercase;
+    color: var(--color-primary);
+    font-size: 11px;
+    letter-spacing: 3.28px;
+}
+
+.contact-right label[for="consent"] {
+    font-size: 0.75rem;
+    font-weight: 300;
+    line-height: 1.05rem;
+    color: var(--color-gray-consent);
+}
+
+.contact-right input[type="text"],
+.contact-right input[type="email"]
+{
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid var(--color-gray-form);
+}
+
+.contact-right button {
+    align-self: flex-end;
+    padding: 1.3rem 6rem;
+    font-size: 0.8rem;
+}
+
+/* hiding the standard input checkbox element */
+
+.consent input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.consent {
+    cursor: pointer;
+    display: flex;
+}
+
+.consent span {
+    height: 24px;
+    flex-shrink: 0;
+    flex-basis: 24px;
+    border: 1px solid var(--color-gray-form);
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.consent input:checked + span {
+    background-image: url(../assets/Checkmark.svg);
+    background-position: center;
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+}
+
+/* --- FOOTER --- */
+
