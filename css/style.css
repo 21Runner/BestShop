@@ -307,7 +307,7 @@ nav a:hover {
 
 .benefits-box  {
     background-color: var(--color-white);
-    height: calc(100vh / 3.5);
+    height: 23rem;
     display: flex;
     /* align-items: center; */
     justify-content: space-between;
@@ -322,7 +322,7 @@ nav a:hover {
 }
 
 .benefits-box-divide  {
-    height: calc(100vh / 3.5);
+    height: 23rem;
     display: flex;
     justify-content: space-between;
     /* align-items: stretch; */
@@ -449,7 +449,130 @@ nav a:hover {
 
 /* -- PRICING -- */
 
+.pricing .container {
+    padding: 5rem 0;
+}
+
 .pricing h2 {
     font-size: 36px;
     color: var(--color-black);
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.pricing h3 {
+    font-size: 1.35rem;
+    padding-top: 2rem;
+}
+
+.pricing a.btn {
+    position: absolute;
+    padding: 1.3rem 4.5rem;
+    font-size: 0.8rem;
+    left:50%;
+    bottom:0;
+    transform: translate(-50%, 50%);
+}
+
+.pricing ol {
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.dollar_price {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:"wdth" 100;
+  font-size: 2.9rem;
+  color: var(--color-primary);
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.pricing-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 28%;
+    border: 1px solid black;
+    border-radius: 18px;
+    position: relative;
+
+    padding-bottom: 5rem;
+    min-height: 28rem;
+}
+
+.pricing-card:nth-of-type(1) .dollar_price {
+    color: var(--color-red);
+}
+
+.pricing-card:nth-of-type(1) a.btn {
+    background-color: var(--color-red);
+}
+
+.pricing-card:nth-of-type(3) .dollar_price {
+    color: var(--color-green);
+}
+
+.pricing-card:nth-of-type(3) a.btn {
+    background-color: var(--color-green);
+}
+
+.pricing-card ol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pricing-card ol li {
+    position: relative;
+    line-height: 2.2rem;
+}
+
+.pricing-card ol li::before {
+    content: "";
+    width: 11px;
+    height: 11px;
+    top: 50%;
+    left: -1rem;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-image: url(../assets/Checkmark-2.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.pricing-card:nth-of-type(1) {
+    border-color: var(--color-red);
+}
+
+.pricing-card:nth-of-type(2) {
+    border-color: var(--color-primary);
+    /* transform: scale(110%, 110%); */
+    box-shadow: 5px 10px 27px var(--color-primary-shadow);
+    min-height: 31rem;
+}
+
+.pricing-card:nth-of-type(3) {
+    border-color: var(--color-green);
+}
+
+
+/* target 4th and 5th li element in the first .pricing-card */
+.pricing-card:nth-of-type(1) ol li:nth-of-type(4)::before,
+.pricing-card:nth-of-type(1) ol li:nth-of-type(5)::before {
+    background-image: url(../assets/Close.svg);
+}
+
+/* target last li element in the second .pricing-card */
+.pricing-card:nth-of-type(2) ol li:last-of-type::before {
+    background-image: url(../assets/Close.svg);
 }
